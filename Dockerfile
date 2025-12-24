@@ -12,6 +12,7 @@ RUN chmod +x get-docker.sh && sh ./get-docker.sh
 
 # set the default github runner version
 ARG RUNNER_VERSION="2.326.0"
+LABEL runner_version=${RUNNER_VERSION}
 
 RUN cd /home/docker && mkdir actions-runner && cd actions-runner \
   && curl -k -O -L https://github.com/actions/runner/releases/download/v${RUNNER_VERSION}/actions-runner-linux-x64-${RUNNER_VERSION}.tar.gz \
