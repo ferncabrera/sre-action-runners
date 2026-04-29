@@ -26,3 +26,6 @@ docker buildx build --platform linux/amd64 \
   -t fcabrera01/actions-image:latest \
   -t fcabrera01/actions-image:v${RUNNER_VERSION} \
   --push .
+
+docker image rm -f fcabrera01/actions-image:latest
+docker image rm -f fcabrera01/actions-image:v${RUNNER_VERSION}
